@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> UCI DRAGONBOAT &mdash; 21st Generation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+    <link rel="icon" type="image/x-icon" href="/logo/logo3.png">
+</head>
+
+<body>
+    <header>
+        <div class="nav-container">
+            <nav class="navbar">
+
+                <a href="index.html">
+                    <div class="logo">
+
+                        <img width="35px" height="auto" src="/logo/logo1.jpg">
+                        <img width="150px" height="auto" src="/logo/logo2.png">
+
+                    </div>
+                </a>
+
+                <ul class="nav-menu">
+                    <li class="nav-item"><a class="nav-link" href="index.html#about-page">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="roster.html">Our Crew</a></li>
+                    <li class="nav-item"><a class="nav-link" href="recruitment.html">Recruitment</a></li>
+                    <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+
+            </nav>
+        </div>
+    </header>
+
+    <div class="content recruitment-content">
+        <h1>RECRUITMENT 2023</h1>
+
+        <div class="recruitment-timer-container">
+            <div id="timer"></div>
+        </div>
+
+        <br>
+        <h2 align="center">Check out our Fall 2023 Recruitment Video and <a href="#flyer" style="color: green;">Flyer</a></h2>
+        <br>
+
+        <div class="recruitment-video-container">
+        <div class='embed-container'><iframe src="https://www.youtube.com/embed/230IaWQVZno?si=6c6C6m_WcE1sTlx1" frameborder='0'
+                allowfullscreen></iframe></div>
+        </div>
+        <br>
+        <div id="flyer" class="flyer-container">
+            <img width="800px" src="/misc-photos/Flyer.png">
+        </div>
+
+    </div>
+
+    <footer id="footer">
+        <img class="footer-img" width="35px" height="auto" src="/logo/logo1.jpg">
+        <br>
+        <a href="https://www.instagram.com/ucidragonboat/" target="_blank" rel="noopener noreferrer"
+            class="fa fa-instagram fa-lg" style="margin-right: 10px; padding-bottom:20px;"></a>
+        <a href="https://www.facebook.com/ucidragonboat/" target="_blank" rel="noopener noreferrer"
+            class="fa fa-facebook fa-lg" style="margin-right: 10px;"></a>
+        <a href="https://www.youtube.com/ucidragonboat/" target="_blank" rel="noopener noreferrer"
+            class="fa fa-youtube-play fa-lg" style="margin-right: 10px;"></a>
+        <a href="mailto:ucidragonboat@gmail.com" target="_blank" rel="noopener noreferrer" class="fa fa-envelope fa-lg"
+            style="margin-right: 10px;"></a>
+
+        <p class="footer-text">Copyright @ UC Irvine Dragonboat <br />
+            Designed by Serena Huang
+        </p>
+        <br>
+    </footer>
+
+    <script src="/javascript/nav.js"></script>
+    <script type="text/javascript">
+        function updateTimer() {
+            future = Date.parse("September 24, 2023 22:00:00");
+            now = new Date();
+            diff = future - now;
+
+            days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            hours = Math.floor(diff / (1000 * 60 * 60));
+            mins = Math.floor(diff / (1000 * 60));
+            secs = Math.floor(diff / 1000);
+
+            d = days;
+            h = hours - days * 24;
+            m = mins - hours * 60;
+            s = secs - mins * 60;
+
+            document.getElementById("timer")
+                .innerHTML =
+                '<div>' + d + '<span>DAYS</span></div>' +
+                '<div>' + h + '<span>HOURS</span></div>' +
+                '<div>' + m + '<span>MINUTES</span></div>' +
+                '<div>' + s + '<span>SECONDS</span></div>';
+        }
+        setInterval('updateTimer()', 1000);
+    </script>
+
+</body>
+
+</html>
