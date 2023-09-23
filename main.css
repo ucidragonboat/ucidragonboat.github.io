@@ -25,6 +25,18 @@ h1 {
   text-align: center;
   padding-top: 50px;
   padding-bottom: 30px;
+  /* padding-left: 10px;
+  padding-right: 10px; */
+}
+
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 45px;
+    
+  }
+  p {
+    font-size: 20px;
+  }
 }
 
 /*#########################
@@ -166,6 +178,8 @@ li {
 
 #about-page {
   padding-top: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 #about-page p {
@@ -451,8 +465,13 @@ img {
       RECRUITMENT PAGE
 ###########################*/
 
+.recruitment-content{
+  padding-left: 10px;
+  padding-right: 10px;
+}
 .recruitment-timer-container {
-  width: 650px;
+  max-width: 650px; 
+  min-width: 350px;
   background-color: white;
   box-shadow: 0px 0px 10px 5px rgb(0, 0, 0, 0.25);
   border-radius: 30px;
@@ -460,7 +479,6 @@ img {
   display: block;
   margin-left: auto;
   margin-right: auto;
-
 }
 
 #timer {
@@ -489,12 +507,11 @@ img {
 }
 
 .recruitment-video-container {
-  width: 1000px;
-  height: auto;
-  background-color: blue;
   display: block;
   margin-left: auto;
   margin-right: auto;
+
+  max-width: 1000px;
 }
 
 .embed-container {
@@ -502,9 +519,6 @@ img {
   padding-bottom: 56.25%;
   height: 0;
   overflow: hidden;
-  max-width: 100%;
-  background-color: red;
-
 }
 
 .embed-container iframe,
@@ -522,6 +536,12 @@ img {
   padding-top: 20px;
 }
 
+.responsive {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+}
+
 
 /*#########################
       CONTACT PAGE
@@ -533,10 +553,6 @@ img {
 
 .contact-subheading h2 {
   font-size: 30px;
-}
-
-.contact-subheading p {
-  font-size: 25px;
 }
 
 .contact-container {
@@ -631,13 +647,23 @@ input[type=submit]:hover {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    max-width: 450px;
+    max-width: 370px;
     padding: 0;
     float: none;
   }
 
   .instagram-div {
-    padding: 0;
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .contact-subheading h2 {
+    font-size: 25px;
+  }
+
+  .contact-subheading p {
+    font-size: 20px;
   }
 }
 
