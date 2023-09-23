@@ -61,15 +61,16 @@
             <section class="contact-section">
                 <br>
                 <div class="contact-div">
-                    <form method="post" onsubmit="return false;">
-                        <label for="name">Name:</label>
-                        <input type="text" name="name" id="name">
-                        <label for="email">Email:</label>
-                        <input type="text" name="email" id="email">
-                        <label for="message">Message:</label>
-                        <textarea id="message" name="message"></textarea>
-                        <input type="submit" value="Submit">
+                    <form name="gform" id="gform" enctype="text/plain" target="hidden_iframe" onsubmit="submitted=true;" action="https://docs.google.com/forms/d/e/1FAIpQLSftk-QJhwMNH2MZVK-LWKS3Sn0iaw0Y1FmmfE4oAk9nuVXUHA/formResponse?">
+                        <label for="Name">Name:</label>
+                        <input type="text" name="entry.1396344931" id="entry.1396344931" required>
+                        <label for="Email">Email:</label>
+                        <input type="email" name="entry.621924471" id="entry.621924471" required>
+                        <label for="Message">Message:</label>
+                        <textarea name="entry.1056626897" id="entry.1056626897" required></textarea>
+                        <input type="submit" value="Submit" >
                     </form>
+                    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="clearForm();"></iframe>
                 </div>
             </section>
 
@@ -197,6 +198,12 @@
     </footer>
     <script async src="https://instagram.com/static/bundles/es6/EmbedSDK.js/47c7ec92d91e.js"></script>
     <script src="/javascript/nav.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script>
+        function clearForm() {
+            document.getElementById("gform").reset();
+        }
+    </script>
 
 </body>
 
